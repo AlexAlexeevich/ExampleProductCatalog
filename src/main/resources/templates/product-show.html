@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product</title>
+</head>
+<body>
+<form action = "#" th:action="@{/product-show}" th:object="${product}" method="post">
+    <label for="product_description">Input name</label>
+    <input type="text" th:field="*{product_description}" id="product_description" placeholder="Input name">
+    <input type="submit" value="Find Product">
+    <br>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Product description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <div th:switch="${resultProduct}">
+            <p th:case="null">No Product</p>
+            <p th:case="*">
+                <tr>
+                    <td th:text="${resultProduct.id}"></td>
+                    <td th:text="${resultProduct.product_description}"></td>
+                </tr>
+            </p>
+        </div>
+
+        </tbody>
+    </table>
+    <p><a href="/products">Back</a></p>
+</form>
+</body>
+</html>
