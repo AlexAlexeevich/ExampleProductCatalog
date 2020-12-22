@@ -1,4 +1,4 @@
-package com.example.ProductCatalog.productDao;
+package com.example.ProductCatalog.dao;
 
 import com.example.ProductCatalog.model.Product;
 import org.springframework.stereotype.Repository;

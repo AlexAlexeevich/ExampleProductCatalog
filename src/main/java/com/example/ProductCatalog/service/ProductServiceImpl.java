@@ -1,7 +1,7 @@
 package com.example.ProductCatalog.service;
 
 import com.example.ProductCatalog.model.Product;
-import com.example.ProductCatalog.productDao.ProductDao;
+import com.example.ProductCatalog.dao.ProductDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
